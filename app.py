@@ -20,7 +20,7 @@ class Handler(tornado.web.RequestHandler):
         self.write(res)
     @gen.coroutine
     def get(self):
-        path = self.get_argument('url0')
+        path = self.get_argument('u0')
         http = httpclient.AsyncHTTPClient()
         yield http.fetch(path,self.conv)
 def make_app():
